@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@import 'variables.css';
+@import 'reset.css';
+@import 'typography.css';
+@import 'buttons.css';
+
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/shop.css';
+@import 'components/gallery.css';
+@import 'components/about.css';
+@import 'components/footer.css';
+
+@import 'pages/about-page.css';
+@import 'pages/gallery-page.css';
+@import 'pages/shop-page.css';
+@import 'pages/product-page.css';

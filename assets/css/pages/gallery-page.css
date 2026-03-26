@@ -1,0 +1,77 @@
+/* ========================================
+   GALLERY — página interna
+   ======================================== */
+
+.gallery-page {
+  padding: 130px 0px;
+}
+
+/* --- Breadcrumb --- */
+
+.gallery-page__breadcrumb {
+  padding: var(--space-6) 90px var(--space-4);
+  position: static;
+}
+
+/* --- Grid de imagens --- */
+
+.gallery-page__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  padding: 0px 90px;
+  align-items: start;
+}
+
+/* Cada coluna é um flex container independente — permite stagger */
+.gallery-page__col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.gallery-page__col--left .gallery-page__item {
+  overflow: hidden;
+  height: 380px;
+}
+
+.gallery-page__col--right .gallery-page__item {
+  overflow: hidden;
+  height: 560px;
+}
+
+.gallery-page__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gallery-page__item:hover img {
+  transform: scale(1.03);
+}
+
+/* --- Responsivo --- */
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding-top: 70px;
+  }
+
+  .gallery-page__breadcrumb {
+    padding: var(--space-4) var(--space-6) var(--space-3);
+  }
+
+  .gallery-page__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 24px;
+  }
+
+  .gallery-page__col--left .gallery-page__item,
+  .gallery-page__col--right .gallery-page__item {
+    height: 280px;
+  }
+}

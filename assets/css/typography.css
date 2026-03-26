@@ -1,0 +1,23 @@
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-text-secondary);
+}
+
+p {
+  line-height: var(--leading-normal);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}

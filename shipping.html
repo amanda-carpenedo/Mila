@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping and Returns — Mila | Skin &amp; Colour</title>
+    <meta
+      name="description"
+      content="Informações sobre envio e devoluções — Mila Skin &amp; Colour."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Barra de fundo cinza (sempre visível em páginas internas) -->
+    <div class="header__bg" aria-hidden="true"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+      <a
+        class="header__logo"
+        href="index.html"
+        aria-label="Mila — página inicial"
+      >
+        <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+      </a>
+
+      <button
+        class="header__menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-drawer"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Overlay escuro atrás do drawer -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <!-- ===== NAV DRAWER ===== -->
+    <nav class="nav-drawer" id="nav-drawer" aria-label="Menu principal">
+      <button class="nav-drawer__close" aria-label="Fechar menu"></button>
+
+      <ul class="nav-drawer__nav" role="list">
+        <li><a class="nav-drawer__link" href="index.html">Home</a></li>
+        <li><a class="nav-drawer__link" href="shop.html">Shop</a></li>
+        <li><a class="nav-drawer__link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-drawer__link" href="about.html">About</a></li>
+        <li><a class="nav-drawer__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="shipping-page">
+      <div class="shipping-page__grid">
+
+        <!-- Coluna esquerda — breadcrumb -->
+        <div class="shipping-page__left-col">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a class="breadcrumb__link" href="index.html">Home</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <a class="breadcrumb__link" href="shipping.html">Shipping and Returns</a>
+          </nav>
+        </div>
+
+        <!-- Coluna direita — conteúdo -->
+        <div class="shipping-page__content">
+
+          <h1 class="shipping-page__title">Shipping and Returns</h1>
+
+          <section class="shipping-page__section">
+            <h2 class="shipping-page__heading">Shipping</h2>
+            <p class="shipping-page__body">
+              All artworks are carefully and professionally packed before shipping to ensure
+              the artwork arrives in perfect condition. All orders are shipped via tracked
+              courier services and will require a signature upon delivery.
+            </p>
+          </section>
+
+          <section class="shipping-page__section">
+            <h2 class="shipping-page__heading">Shipping Times</h2>
+            <ul class="shipping-page__list">
+              <li><strong>UK Post:</strong> 7–10 business days</li>
+              <li><strong>Rest of the World:</strong> 11–14 business days</li>
+            </ul>
+          </section>
+
+          <section class="shipping-page__section">
+            <h2 class="shipping-page__heading">Please note</h2>
+            <p class="shipping-page__body">
+              Any customs duties or taxes incurred at customs are entirely the responsibility of the buyer.
+            </p>
+          </section>
+
+          <section class="shipping-page__section">
+            <h2 class="shipping-page__heading">Returns</h2>
+            <p class="shipping-page__body">
+              I do not accept returns or exchanges on original artworks. However, if there are
+              any issues regarding damage during transit, please reach out immediately via the
+              <a class="shipping-page__link" href="contact.html">Contact</a> page or email me
+              at <a class="shipping-page__link" href="mailto:info@skinandcolour.com">info@skinandcolour.com</a>.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__brand">
+        <a
+          class="footer__logo"
+          href="index.html"
+          aria-label="Mila — página inicial"
+        >
+          <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+        </a>
+        <p class="footer__copy">&copy; 2026 skin&amp;colour</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Showroom Addresses</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">BRUT</a></li>
+          <li>
+            <a class="footer__link" href="#">Magnitogorsk, 24 Kuybysheva St.</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Customer Service</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">Payment terms</a></li>
+          <li><a class="footer__link" href="#">Delivery / Pickup</a></li>
+          <li><a class="footer__link" href="#">Return policy</a></li>
+          <li>
+            <a class="footer__link" href="#">Public offer / Terms of service</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">About Us</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">Telegram</a></li>
+          <li><a class="footer__link" href="#">Instagram</a></li>
+          <li><a class="footer__link" href="#">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/components/header.js"></script>
+    <script>
+      // Página interna: header sempre no estado compacto
+      (function () {
+        var header = document.querySelector(".header");
+        var headerBg = document.querySelector(".header__bg");
+        function forceScrolled() {
+          if (header) header.classList.add("header--scrolled");
+          if (headerBg) headerBg.classList.add("is-visible");
+        }
+        forceScrolled();
+        window.addEventListener("scroll", forceScrolled, { passive: true });
+      })();
+    </script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

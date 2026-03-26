@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Costa del Sol — Mila | Skin &amp; Colour</title>
+    <meta
+      name="description"
+      content="Costa del Sol — obra original de Mila. Skin &amp; Colour."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Barra de fundo cinza (sempre visível em páginas internas) -->
+    <div class="header__bg" aria-hidden="true"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+      <a
+        class="header__logo"
+        href="index.html"
+        aria-label="Mila — página inicial"
+      >
+        <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+      </a>
+
+      <button
+        class="header__menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-drawer"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Overlay escuro atrás do drawer -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <!-- ===== NAV DRAWER ===== -->
+    <nav class="nav-drawer" id="nav-drawer" aria-label="Menu principal">
+      <button class="nav-drawer__close" aria-label="Fechar menu"></button>
+
+      <ul class="nav-drawer__nav" role="list">
+        <li><a class="nav-drawer__link" href="index.html">Home</a></li>
+        <li>
+          <a class="nav-drawer__link" href="shop.html" aria-current="page"
+            >Shop</a
+          >
+        </li>
+        <li><a class="nav-drawer__link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-drawer__link" href="about.html">About</a></li>
+        <li><a class="nav-drawer__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="product-page">
+
+      <!-- Layout principal: carrossel + descrição -->
+      <div class="product-page__layout">
+
+        <!-- ===== COLUNA ESQUERDA: Carrossel ===== -->
+        <div class="product-page__carousel-col">
+
+          <!-- Breadcrumb -->
+          <nav class="product-page__breadcrumb breadcrumb" aria-label="Breadcrumb">
+            <a class="breadcrumb__link" href="index.html">Home</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <a class="breadcrumb__link" href="shop.html">Shop</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <span class="breadcrumb__current" aria-current="page">Original Works</span>
+          </nav>
+
+          <!-- Imagem principal -->
+          <div class="product-carousel" aria-label="Galeria de imagens do produto">
+            <button
+              class="product-carousel__arrow product-carousel__arrow--prev"
+              aria-label="Imagem anterior"
+            >&#8249;</button>
+
+            <div class="product-carousel__track">
+              <img
+                class="product-carousel__slide is-active"
+                src="assets/img/placeholder1.png"
+                alt="Costa del Sol — vista 1"
+                loading="eager"
+                fetchpriority="high"
+              />
+              <img
+                class="product-carousel__slide"
+                src="assets/img/placeholder2.png"
+                alt="Costa del Sol — vista 2"
+                loading="lazy"
+              />
+              <img
+                class="product-carousel__slide"
+                src="assets/img/placeholder3.png"
+                alt="Costa del Sol — vista 3"
+                loading="lazy"
+              />
+              <img
+                class="product-carousel__slide"
+                src="assets/img/placeholder1.png"
+                alt="Costa del Sol — vista 4"
+                loading="lazy"
+              />
+              <img
+                class="product-carousel__slide"
+                src="assets/img/placeholder2.png"
+                alt="Costa del Sol — vista 5"
+                loading="lazy"
+              />
+            </div>
+
+            <button
+              class="product-carousel__arrow product-carousel__arrow--next"
+              aria-label="Próxima imagem"
+            >&#8250;</button>
+
+            <span class="product-carousel__counter" aria-live="polite">1/5</span>
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="product-carousel__thumbs" role="list" aria-label="Miniaturas do produto">
+            <button
+              class="product-carousel__thumb is-active"
+              role="listitem"
+              aria-label="Ver imagem 1"
+              data-index="0"
+            >
+              <img src="assets/img/placeholder1.png" alt="Miniatura 1" />
+            </button>
+            <button
+              class="product-carousel__thumb"
+              role="listitem"
+              aria-label="Ver imagem 2"
+              data-index="1"
+            >
+              <img src="assets/img/placeholder2.png" alt="Miniatura 2" />
+            </button>
+            <button
+              class="product-carousel__thumb"
+              role="listitem"
+              aria-label="Ver imagem 3"
+              data-index="2"
+            >
+              <img src="assets/img/placeholder3.png" alt="Miniatura 3" />
+            </button>
+            <button
+              class="product-carousel__thumb"
+              role="listitem"
+              aria-label="Ver imagem 4"
+              data-index="3"
+            >
+              <img src="assets/img/placeholder1.png" alt="Miniatura 4" />
+            </button>
+            <button
+              class="product-carousel__thumb"
+              role="listitem"
+              aria-label="Ver imagem 5"
+              data-index="4"
+            >
+              <img src="assets/img/placeholder2.png" alt="Miniatura 5" />
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ===== COLUNA DIREITA: Informações do produto ===== -->
+        <div class="product-page__info">
+
+          <h1 class="product-page__title">Costa del Sol</h1>
+
+          <div class="product-page__pricing">
+            <span class="product-page__price">From 190€</span>
+            <span class="product-page__badge">On sale</span>
+          </div>
+
+          <p class="product-page__shipping-note">
+            Est. shipping fee (calculated).
+            <a class="product-page__link" href="#">View plans</a><br />
+            But only for to every US Greenland support system instantly
+          </p>
+
+          <button class="btn btn--outline product-page__cta" type="button">
+            Add to cart
+          </button>
+
+          <!-- Descrição detalhada -->
+          <div class="product-page__description">
+
+            <p class="product-page__desc-body">
+              A captivating [Editoris] study of light and texture, developed over several
+              months of meticulous layering.
+            </p>
+
+            <ul class="product-page__specs">
+              <li>
+                <strong>Medium:</strong> Original painting on Silver Open Canvas print
+              </li>
+              <li>
+                <strong>Finishing:</strong> Finished with a professional-grade Canvas/finished
+                varnish for UV protection and colour vibrancy
+              </li>
+              <li>
+                <strong>Dimensions:</strong> 80×80 × 1 cm
+              </li>
+              <li>
+                <strong>Time needed:</strong> —
+              </li>
+              <li>
+                <strong>Display:</strong> The piece features padded edges and is ready to
+                hang on a rod. Set at 60cm from a canvas floating frame.
+              </li>
+            </ul>
+
+            <h3 class="product-page__desc-heading">Shipping &amp; Packaging</h3>
+            <p class="product-page__desc-body">
+              All original artworks are securely and professionally packed using acid-free
+              materials and reinforced boxing to ensure safe transit.
+            </p>
+            <ul class="product-page__specs">
+              <li>
+                Calculations: Shipping is charged at checkout and varies depending on
+                your global location.
+              </li>
+              <li>
+                Tracking: All packages are sent insured with tracked courier services. A
+                signature will be required upon delivery.
+              </li>
+            </ul>
+
+            <h3 class="product-page__desc-heading">Shipping Times</h3>
+            <ul class="product-page__specs">
+              <li>Domestic: usually 7–10 business days</li>
+              <li>International: 11–14 business days depending on customs processing</li>
+            </ul>
+
+            <h3 class="product-page__desc-heading">Returns</h3>
+            <p class="product-page__desc-body">
+              I do not accept returns or exchanges on original copies; however, if there are
+              any issues regarding damage during transit, please reach out immediately
+              via link [Contact] tab or email me at info@skinandcolour.com.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__brand">
+        <a
+          class="footer__logo"
+          href="index.html"
+          aria-label="Mila — página inicial"
+        >
+          <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+        </a>
+        <p class="footer__copy">&copy; 2026 skin&amp;colour</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Showroom Addresses</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">BRUT</a></li>
+          <li>
+            <a class="footer__link" href="#">Magnitogorsk, 24 Kuybysheva St.</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Customer Service</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">Payment terms</a></li>
+          <li><a class="footer__link" href="#">Delivery / Pickup</a></li>
+          <li><a class="footer__link" href="#">Return policy</a></li>
+          <li>
+            <a class="footer__link" href="#">Public offer / Terms of service</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">About Us</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">Telegram</a></li>
+          <li><a class="footer__link" href="#">Instagram</a></li>
+          <li><a class="footer__link" href="#">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/components/header.js"></script>
+    <script>
+      // Página interna: header sempre no estado compacto
+      (function () {
+        var header = document.querySelector(".header");
+        var headerBg = document.querySelector(".header__bg");
+        function forceScrolled() {
+          if (header) header.classList.add("header--scrolled");
+          if (headerBg) headerBg.classList.add("is-visible");
+        }
+        forceScrolled();
+        window.addEventListener("scroll", forceScrolled, { passive: true });
+      })();
+    </script>
+    <script src="assets/js/components/product-carousel.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

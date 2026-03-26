@@ -1,0 +1,226 @@
+/* ========================================
+   HEADER
+   ======================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--space-6) var(--space-8);
+  background-color: transparent;
+  pointer-events: none; /* permite clique apenas nos filhos */
+}
+
+/* Logo — começa enorme (quase 100vw), encolhe ao rolar */
+.header__logo {
+  pointer-events: all;
+  display: inline-block;
+  margin-top: 60px;
+  transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header--scrolled .header__logo {
+  margin-top: 0;
+}
+
+.header__logo img {
+  display: block;
+  width: min(1330px, calc(100vw - 60px));
+  height: auto;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: width;
+}
+
+.header--scrolled .header__logo img {
+  width: 200px;
+}
+
+/* Botão hamburguer — alinhado horizontalmente com o logo */
+.header__menu-toggle {
+  pointer-events: all;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 60px;
+  opacity: 0;
+  transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease;
+}
+
+.header--scrolled .header__menu-toggle {
+  margin-top: 0;
+  opacity: 1;
+}
+
+.header__menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--color-ui);
+  transition: background-color 0.3s ease;
+}
+
+.header--scrolled .header__menu-toggle span {
+  background-color: var(--color-white);
+}
+
+/* Barra de fundo que aparece ao scrollar */
+.header__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: var(--color-ui);
+  z-index: 99;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header--scrolled ~ .header__bg,
+.header__bg.is-visible {
+  transform: translateY(0);
+}
+
+/* ========================================
+   MENU DRAWER (lateral direito)
+   ======================================== */
+
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 33.333vw;
+  min-width: 260px;
+  background-color: var(--color-ui);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8) var(--space-10);
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-drawer.is-open {
+  transform: translateX(0);
+}
+
+/* Botão fechar (X) */
+.nav-drawer__close {
+  align-self: flex-end;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-12);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.nav-drawer__close::before,
+.nav-drawer__close::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 1.5px;
+  background-color: var(--color-white);
+}
+
+.nav-drawer__close::before {
+  transform: rotate(45deg);
+}
+
+.nav-drawer__close::after {
+  transform: rotate(-45deg);
+}
+
+/* Links de navegação */
+.nav-drawer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-6);
+}
+
+.nav-drawer__link {
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-white);
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.nav-drawer__link:hover,
+.nav-drawer__link:focus-visible {
+  opacity: 1;
+  color: var(--color-primary);
+  outline: none;
+}
+
+/* Overlay escuro atrás do drawer */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 199;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.nav-overlay.is-visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ========================================
+   RESPONSIVO
+   ======================================== */
+
+@media (max-width: 768px) {
+  .header {
+    padding: var(--space-5) var(--space-6);
+  }
+
+  .header__logo img {
+    width: calc(100vw - 60px);
+  }
+
+  .header--scrolled .header__logo img {
+    width: 100px;
+  }
+
+  .header__menu-toggle {
+    margin-top: 40px;
+  }
+
+  .header--scrolled .header__menu-toggle {
+    margin-top: 0;
+  }
+
+  .nav-drawer {
+    width: 75vw;
+  }
+}

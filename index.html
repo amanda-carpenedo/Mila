@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mila — Skin &amp; Colour</title>
+  <meta name="description" content="Mila — Skin &amp; Colour. Fotografia editorial e e-commerce.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Barra de fundo cinza (aparece ao scrollar, fica atrás do header) -->
+  <div class="header__bg" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <a class="header__logo" href="index.html" aria-label="Mila — página inicial">
+      <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour">
+    </a>
+
+    <button
+      class="header__menu-toggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="nav-drawer"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Overlay escuro atrás do drawer -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ===== NAV DRAWER ===== -->
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Menu principal">
+    <button
+      class="nav-drawer__close"
+      aria-label="Fechar menu"
+    ></button>
+
+    <ul class="nav-drawer__nav" role="list">
+      <li><a class="nav-drawer__link" href="index.html">Home</a></li>
+      <li><a class="nav-drawer__link" href="shop.html">Shop</a></li>
+      <li><a class="nav-drawer__link" href="gallery.html">Gallery</a></li>
+      <li><a class="nav-drawer__link" href="about.html">About</a></li>
+      <li><a class="nav-drawer__link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="Hero">
+      <img
+        class="hero__image"
+        src="assets/img/close-up-hand-with-rings-holding-plant 1.png"
+        alt="Detalhe de mão com anéis segurando uma planta"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </section>
+
+    <!-- ===== SHOP ===== -->
+    <section class="shop" id="shop" aria-label="Shop">
+      <img
+        class="shop__image"
+        src="assets/img/black-white-portrait-beautiful-woman-posing-indoors-chair 2.png"
+        alt="Retrato em preto e branco de mulher posando em ambiente interno com cadeira"
+        loading="lazy"
+      >
+      <div class="shop__overlay">
+        <a class="btn btn--outline" href="shop.html">Shop</a>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery" id="gallery" aria-label="Gallery">
+      <div class="gallery__image-wrap">
+        <img
+          class="gallery__image"
+          src="assets/img/black-white-portrait-beautiful-woman-posing-indoors-dress 1.png"
+          alt="Retrato em preto e branco de mulher posando com vestido em ambiente interno"
+          loading="lazy"
+        >
+      </div>
+      <div class="gallery__image-wrap">
+     <img
+        class="about__image"
+        src="assets/img/black-white-portrait-beautiful-woman-posing-indoors-chair 3.png"
+        alt="Retrato em preto e branco de mulher posando em ambiente interno"
+        loading="lazy"
+      >
+      </div>
+      <div class="gallery__overlay">
+        <a class="btn btn--outline" href="gallery.html">Gallery</a>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about" aria-label="About">
+      <img
+          class="gallery__image"
+          src="assets/img/black-white-portrait-beautiful-woman-posing-indoors-couch 2.png"
+          alt="Retrato em preto e branco de mulher posando em sofá"
+          loading="lazy"
+        >
+           
+      <div class="about__overlay">
+        <a class="btn btn--outline" href="about.html">About</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+
+    <!-- Coluna 1: Logo + copyright -->
+    <div class="footer__brand">
+      <a class="footer__logo" href="index.html" aria-label="Mila — página inicial">
+        <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour">
+      </a>
+      <p class="footer__copy">&copy; 2026 skin&amp;colour</p>
+    </div>
+
+    <!-- Coluna 2: Showroom -->
+    <div class="footer__col">
+      <h3 class="footer__col-title">Showroom Addresses</h3>
+      <ul class="footer__col-list" role="list">
+        <li><a class="footer__link" href="#">BRUT</a></li>
+        <li><a class="footer__link" href="#">Magnitogorsk, 24 Kuybysheva St.</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3: Customer Service -->
+    <div class="footer__col">
+      <h3 class="footer__col-title">Customer Service</h3>
+      <ul class="footer__col-list" role="list">
+        <li><a class="footer__link" href="#">Payment terms</a></li>
+        <li><a class="footer__link" href="#">Delivery / Pickup</a></li>
+        <li><a class="footer__link" href="#">Return policy</a></li>
+        <li><a class="footer__link" href="#">Public offer / Terms of service</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4: About Us -->
+    <div class="footer__col">
+      <h3 class="footer__col-title">About Us</h3>
+      <ul class="footer__col-list" role="list">
+        <li><a class="footer__link" href="#">Telegram</a></li>
+        <li><a class="footer__link" href="#">Instagram</a></li>
+        <li><a class="footer__link" href="#">Email</a></li>
+      </ul>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/components/header.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

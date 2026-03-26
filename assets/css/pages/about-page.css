@@ -1,0 +1,129 @@
+/* ========================================
+   ABOUT — página interna
+   ======================================== */
+
+.about-page {
+  padding-top: 90px; /* altura do header compacto */
+}
+
+/* --- Breadcrumb --- */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  color: var(--color-text-primary);
+}
+
+.about-page .breadcrumb {
+  position: absolute;
+  top: -28px;
+  left: 0;
+}
+
+.breadcrumb__link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb__link:hover {
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb__sep {
+  color: var(--color-text-muted);
+}
+
+/* --- Grid principal --- */
+
+.about-page__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+  padding: 100px 90px 100px;
+  min-height: calc(100vh - 90px - 36px); /* header + breadcrumb */
+}
+
+/* --- Coluna da foto --- */
+
+.about-page__photo-col {
+  position: relative;
+}
+
+.about-page__photo-wrap {
+  overflow: hidden;
+}
+
+.about-page__photo {
+  max-width: 621px;
+  height: 920px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* --- Coluna do texto --- */
+
+.about-page__text-col {
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-page__lead {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+  color: var(--color-text-primary);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-2);
+}
+
+.about-page__body {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+  color: var(--color-text-primary);
+  line-height: var(--leading-loose);
+}
+
+.about-page__signature {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin-top: var(--space-4);
+  align-self: flex-end;
+}
+
+/* --- Responsivo --- */
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 70px;
+  }
+
+  .breadcrumb {
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .about-page__grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .about-page__photo-col {
+    height: 65vh;
+  }
+
+  .about-page__text-col {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .about-page__signature {
+    width: 140px;
+  }
+}
