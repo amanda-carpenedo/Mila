@@ -3,13 +3,16 @@
    ======================================== */
 
 .shop-page {
-  padding: 140px 100px;
+  position: relative;
+  padding: 160px 100px;
 }
 
 /* --- Breadcrumb --- */
 
 .shop-page__breadcrumb {
-  margin-bottom: var(--space-8);
+  position: absolute;
+  top: 140px;
+  left: 100px;
 }
 
 /* --- Filtros --- */
@@ -19,7 +22,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-6);
-  margin-bottom: var(--space-10);
+  margin-bottom: 17px;
 }
 
 .shop-page__filter {
@@ -69,8 +72,8 @@
   display: block;
   overflow: hidden;
   background-color: var(--color-bg-secondary);
-  width: 393px;
-  height: 595px;
+  width: 100%;
+  aspect-ratio: 393 / 595;
 }
 
 .shop-page__card-img-wrap img {
@@ -116,6 +119,11 @@
     padding: 100px 60px;
   }
 
+  .shop-page__breadcrumb {
+    top: 100px;
+    left: 60px;
+  }
+
   .shop-page__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -123,17 +131,20 @@
 
 @media (max-width: 768px) {
   .shop-page {
-    padding: 80px 24px;
+    padding: 110px 30px 60px; /* 80px header + 30px gap, 30px laterais */
   }
 
-  .shop-page__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 16px;
+  .shop-page__breadcrumb {
+    position: static;
+    margin-bottom: var(--space-4);
   }
-}
 
-@media (max-width: 480px) {
   .shop-page__grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+.shop-page__card-title {
+    font-size: var(--text-xl);
   }
 }

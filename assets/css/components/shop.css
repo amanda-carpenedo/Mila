@@ -30,4 +30,8 @@
   .shop {
     height: 60vh;
   }
+
+  .shop__overlay {
+    padding-bottom: 64px;
+  }
 }

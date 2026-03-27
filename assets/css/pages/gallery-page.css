@@ -57,21 +57,24 @@
 
 @media (max-width: 768px) {
   .gallery-page {
-    padding-top: 70px;
+    padding-top: 80px;
   }
 
   .gallery-page__breadcrumb {
-    padding: var(--space-4) var(--space-6) var(--space-3);
+    padding: var(--space-4) var(--space-5) var(--space-3);
   }
 
   .gallery-page__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 40px 24px;
+    grid-template-columns: 2fr 1fr;
+    gap: 12px;
+    padding: 24px 16px 40px;
   }
 
-  .gallery-page__col--left .gallery-page__item,
+  .gallery-page__col--left .gallery-page__item {
+    height: 200px;
+  }
+
   .gallery-page__col--right .gallery-page__item {
-    height: 280px;
+    height: 290px;
   }
 }

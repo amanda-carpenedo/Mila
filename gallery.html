@@ -34,15 +34,20 @@
         <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
       </a>
 
-      <button
-        class="header__menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="nav-drawer"
-      >
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header__actions">
+        <button class="header__cart" aria-label="Carrinho de compras">
+          <img src="assets/img/cart.svg" alt="Carrinho" />
+        </button>
+        <button
+          class="header__menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <!-- Overlay escuro atrás do drawer -->
@@ -61,6 +66,7 @@
           >
         </li>
         <li><a class="nav-drawer__link" href="about.html">About</a></li>
+        <li><a class="nav-drawer__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -153,9 +159,9 @@
       <div class="footer__col">
         <h3 class="footer__col-title">Showroom Addresses</h3>
         <ul class="footer__col-list" role="list">
-          <li><a class="footer__link" href="#">BRUT</a></li>
+          <li><span class="footer__link">BRUT</span></li>
           <li>
-            <a class="footer__link" href="#">Magnitogorsk, 24 Kuybysheva St.</a>
+            <span class="footer__link">Magnitogorsk, 24 Kuybysheva St.</span>
           </li>
         </ul>
       </div>

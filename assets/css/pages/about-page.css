@@ -101,29 +101,55 @@
 
 /* --- Responsivo --- */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-page {
-    padding-top: 70px;
-  }
-
-  .breadcrumb {
-    padding: var(--space-3) var(--space-6);
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .about-page__grid {
     grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 60px 0 0;
     min-height: auto;
   }
 
   .about-page__photo-col {
-    height: 65vh;
+    height: auto;
+  }
+
+  .about-page__photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 621 / 920;
+  }
+
+  .about-page .breadcrumb {
+    position: static;
+    margin-bottom: var(--space-3);
   }
 
   .about-page__text-col {
-    padding: var(--space-8) var(--space-6);
+    padding: 0;
+    align-items: flex-start;
   }
 
   .about-page__signature {
     width: 140px;
+    margin-bottom: 70px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 80px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .about-page__grid {
+    padding-top: 30px;
   }
 }

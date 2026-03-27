@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Mila | Skin &amp; Colour</title>
+    <meta
+      name="description"
+      content="Entre em contato com a Mila Skin &amp; Colour."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Barra de fundo cinza (sempre visível em páginas internas) -->
+    <div class="header__bg" aria-hidden="true"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+      <a
+        class="header__logo"
+        href="index.html"
+        aria-label="Mila — página inicial"
+      >
+        <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+      </a>
+
+      <div class="header__actions">
+        <button class="header__cart" aria-label="Carrinho de compras">
+          <img src="assets/img/cart.svg" alt="Carrinho" />
+        </button>
+        <button
+          class="header__menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Overlay escuro atrás do drawer -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <!-- ===== NAV DRAWER ===== -->
+    <nav class="nav-drawer" id="nav-drawer" aria-label="Menu principal">
+      <button class="nav-drawer__close" aria-label="Fechar menu"></button>
+
+      <ul class="nav-drawer__nav" role="list">
+        <li><a class="nav-drawer__link" href="index.html">Home</a></li>
+        <li><a class="nav-drawer__link" href="shop.html">Shop</a></li>
+        <li><a class="nav-drawer__link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-drawer__link" href="about.html">About</a></li>
+        <li><a class="nav-drawer__link" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="contact-page">
+      <div class="contact-page__wrap">
+
+        <!-- Breadcrumb -->
+        <div class="contact-page__breadcrumb-col">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a class="breadcrumb__link" href="index.html">Home</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <a class="breadcrumb__link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Conteúdo central -->
+        <div class="contact-page__content">
+
+          <h1 class="contact-page__title">Contact</h1>
+
+          <p class="contact-page__intro">
+            Make sure to contact us if you have any doubt or proposal to
+            <a class="contact-page__link" href="mailto:info@skinandcolour.com">info@skinandcolour.com</a>.<br />
+          </p>
+
+          <form class="contact-form" action="#" method="post" novalidate>
+
+            <div class="contact-form__row contact-form__row--two-col">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-name">Your name</label>
+                <input
+                  class="contact-form__input"
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-email">Your email</label>
+                <input
+                  class="contact-form__input"
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="Your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-phone">Your phone (optional)</label>
+                <input
+                  class="contact-form__input"
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  placeholder="Your phone (optional)"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-message">Your message</label>
+                <textarea
+                  class="contact-form__textarea"
+                  id="contact-message"
+                  name="message"
+                  placeholder="Your message"
+                  rows="7"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="contact-form__row">
+              <button class="contact-form__submit" type="submit">
+                Send message
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__brand">
+        <a
+          class="footer__logo"
+          href="index.html"
+          aria-label="Mila — página inicial"
+        >
+          <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+        </a>
+        <p class="footer__copy">&copy; 2026 skin&amp;colour</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Showroom Addresses</h3>
+        <ul class="footer__col-list" role="list">
+          <li><span class="footer__link">BRUT</span></li>
+          <li>
+            <span class="footer__link">Magnitogorsk, 24 Kuybysheva St.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">Customer Service</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">Payment terms</a></li>
+          <li><a class="footer__link" href="#">Delivery / Pickup</a></li>
+          <li><a class="footer__link" href="#">Return policy</a></li>
+          <li>
+            <a class="footer__link" href="#">Public offer / Terms of service</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title">About Us</h3>
+        <ul class="footer__col-list" role="list">
+          <li><a class="footer__link" href="#">Telegram</a></li>
+          <li><a class="footer__link" href="#">Instagram</a></li>
+          <li><a class="footer__link" href="#">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- ===== POPUP CONFIRMAÇÃO ===== -->
+    <div class="contact-popup" id="contact-popup" role="dialog" aria-modal="true" aria-labelledby="popup-msg">
+      <div class="contact-popup__backdrop" id="popup-backdrop"></div>
+      <div class="contact-popup__card">
+        <img class="contact-popup__logo" src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
+        <p class="contact-popup__msg" id="popup-msg">Thank you!<br>Your message has been sent successfully.</p>
+        <button class="contact-popup__close" aria-label="Fechar">Close</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/components/header.js"></script>
+    <script>
+      // Página interna: header sempre no estado compacto
+      (function () {
+        var header = document.querySelector(".header");
+        var headerBg = document.querySelector(".header__bg");
+        function forceScrolled() {
+          if (header) header.classList.add("header--scrolled");
+          if (headerBg) headerBg.classList.add("is-visible");
+        }
+        forceScrolled();
+        window.addEventListener("scroll", forceScrolled, { passive: true });
+      })();
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        var form     = document.querySelector('.contact-form');
+        var popup    = document.getElementById('contact-popup');
+        var backdrop = document.getElementById('popup-backdrop');
+        var closeBtn = popup.querySelector('.contact-popup__close');
+
+        function openPopup() {
+          popup.offsetHeight; // força reflow para a animação CSS disparar
+          popup.classList.add('is-visible');
+          closeBtn.focus();
+        }
+
+        function closePopup() {
+          popup.classList.remove('is-visible');
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          openPopup();
+          form.reset();
+        });
+
+        closeBtn.addEventListener('click', closePopup);
+        backdrop.addEventListener('click', closePopup);
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && popup.classList.contains('is-visible')) closePopup();
+        });
+      })();
+    </script>
+  </body>
+</html>

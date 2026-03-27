@@ -1,0 +1,156 @@
+/* ========================================
+   SHIPPING — página interna
+   ======================================== */
+
+.shipping-page {
+  padding-top: 90px; /* altura do header compacto */
+}
+
+/* --- Grid principal --- */
+
+.shipping-page__grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 100px 90px 0px;
+  min-height: 90vh;
+}
+
+/* --- Coluna esquerda (breadcrumb) — posição absoluta --- */
+
+.shipping-page__left-col {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+
+/* --- Breadcrumb (reutiliza .breadcrumb do about-page) --- */
+
+.shipping-page .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  color: var(--color-text-primary);
+}
+
+.shipping-page .breadcrumb__link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.shipping-page .breadcrumb__link:hover {
+  color: var(--color-text-secondary);
+}
+
+.shipping-page .breadcrumb__sep {
+  color: var(--color-text-muted);
+}
+
+/* --- Coluna do conteúdo --- */
+
+.shipping-page__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 620px;
+  width: 100%;
+}
+
+/* --- Título principal --- */
+
+.shipping-page__title {
+  font-family: var(--font-primary);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-regular);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+/* --- Seções --- */
+
+.shipping-page__section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.shipping-page__heading {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.shipping-page__body {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+  color: var(--color-text-primary);
+  line-height: var(--leading-loose);
+  max-width: 580px;
+}
+
+/* --- Lista (Shipping Times) --- */
+
+.shipping-page__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+  color: var(--color-text-primary);
+  line-height: var(--leading-loose);
+}
+
+.shipping-page__list strong {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+}
+
+/* --- Links inline --- */
+
+.shipping-page__link {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.shipping-page__link:hover {
+  color: var(--color-text-secondary);
+}
+
+/* --- Responsivo --- */
+
+@media (max-width: 768px) {
+  .shipping-page {
+    padding-top: 70px;
+  }
+
+  .shipping-page__grid {
+    flex-direction: column;
+    padding: 32px 24px 80px;
+    gap: 24px;
+  }
+
+  .shipping-page__left-col {
+    position: static;
+  }
+
+  .shipping-page__content {
+    max-width: 100%;
+  }
+
+  .shipping-page__title {
+    font-size: var(--text-2xl);
+  }
+
+  .shipping-page__body,
+  .shipping-page__list {
+    max-width: 100%;
+  }
+}

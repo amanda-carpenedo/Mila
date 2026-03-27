@@ -34,15 +34,20 @@
         <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
       </a>
 
-      <button
-        class="header__menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="nav-drawer"
-      >
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header__actions">
+        <button class="header__cart" aria-label="Carrinho de compras">
+          <img src="assets/img/cart.svg" alt="Carrinho" />
+        </button>
+        <button
+          class="header__menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <!-- Overlay escuro atrás do drawer -->
@@ -57,61 +62,77 @@
         <li><a class="nav-drawer__link" href="shop.html">Shop</a></li>
         <li><a class="nav-drawer__link" href="gallery.html">Gallery</a></li>
         <li><a class="nav-drawer__link" href="about.html">About</a></li>
+        <li><a class="nav-drawer__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
     <!-- ===== MAIN ===== -->
     <main class="shipping-page">
       <div class="shipping-page__grid">
-
         <!-- Coluna esquerda — breadcrumb -->
         <div class="shipping-page__left-col">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a class="breadcrumb__link" href="index.html">Home</a>
             <span class="breadcrumb__sep" aria-hidden="true">›</span>
-            <a class="breadcrumb__link" href="shipping.html">Shipping and Returns</a>
+            <a class="breadcrumb__link" href="shipping.html"
+              >Shipping and Returns</a
+            >
           </nav>
         </div>
 
         <!-- Coluna direita — conteúdo -->
         <div class="shipping-page__content">
-
           <h1 class="shipping-page__title">Shipping and Returns</h1>
 
           <section class="shipping-page__section">
             <h2 class="shipping-page__heading">Shipping</h2>
             <p class="shipping-page__body">
-              All artworks are carefully and professionally packed before shipping to ensure
-              the artwork arrives in perfect condition. All orders are shipped via tracked
-              courier services and will require a signature upon delivery.
+              All artworks are securely and professionally packed before
+              shipping in either flat parcels or sturdy tubes.Shipping is
+              charged at checkout for all products and varies depending on
+              location.All products are sent insured, tracked and signed so you
+              can securely follow the progress of your parcel and sign for it on
+              arrival. Exemptions occur in Australia and Canada where either
+              tracked or signed are only available as individual options. I
+              usually select tracked.
             </p>
           </section>
 
           <section class="shipping-page__section">
             <h2 class="shipping-page__heading">Shipping Times</h2>
             <ul class="shipping-page__list">
-              <li><strong>UK Post:</strong> 7–10 business days</li>
-              <li><strong>Rest of the World:</strong> 11–14 business days</li>
+              <li>
+                <strong>UK:</strong> usually next day but 5-7 days on large
+                artworks.
+              </li>
+              <li><strong>Europe:</strong> 3 -7 days</li>
+              <li><strong>Rest of the World:</strong> 7 - 9 days</li>
             </ul>
           </section>
 
           <section class="shipping-page__section">
-            <h2 class="shipping-page__heading">Please note</h2>
-            <p class="shipping-page__body">
-              Any customs duties or taxes incurred at customs are entirely the responsibility of the buyer.
+            <p class="shipping-page__heading">
+              Please note<br />Any customs duties or taxes incurred at customs
+              are entirely the responsibility of the buyer.
             </p>
           </section>
 
           <section class="shipping-page__section">
             <h2 class="shipping-page__heading">Returns</h2>
             <p class="shipping-page__body">
-              I do not accept returns or exchanges on original artworks. However, if there are
-              any issues regarding damage during transit, please reach out immediately via the
-              <a class="shipping-page__link" href="contact.html">Contact</a> page or email me
-              at <a class="shipping-page__link" href="mailto:info@skinandcolour.com">info@skinandcolour.com</a>.
+              I do not accept returns or exchanges.However if there are any
+              problems with the order in terms of damage during shipping, a
+              replacement will be sent free of charge.You can send a message
+              through the 'Contact' tab or email me info@skinandcolour.com
+              <a class="shipping-page__link" href="contact.html">Contact</a>
+              page or email me at
+              <a
+                class="shipping-page__link"
+                href="mailto:info@skinandcolour.com"
+                >info@skinandcolour.com</a
+              >.
             </p>
           </section>
-
         </div>
       </div>
     </main>
@@ -132,9 +153,9 @@
       <div class="footer__col">
         <h3 class="footer__col-title">Showroom Addresses</h3>
         <ul class="footer__col-list" role="list">
-          <li><a class="footer__link" href="#">BRUT</a></li>
+          <li><span class="footer__link">BRUT</span></li>
           <li>
-            <a class="footer__link" href="#">Magnitogorsk, 24 Kuybysheva St.</a>
+            <span class="footer__link">Magnitogorsk, 24 Kuybysheva St.</span>
           </li>
         </ul>
       </div>

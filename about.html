@@ -34,15 +34,20 @@
         <img src="assets/img/logo.svg" alt="Mila — Skin &amp; Colour" />
       </a>
 
-      <button
-        class="header__menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="nav-drawer"
-      >
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header__actions">
+        <button class="header__cart" aria-label="Carrinho de compras">
+          <img src="assets/img/cart.svg" alt="Carrinho" />
+        </button>
+        <button
+          class="header__menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <!-- Overlay escuro atrás do drawer -->
@@ -61,6 +66,7 @@
             >About</a
           >
         </li>
+        <li><a class="nav-drawer__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -88,11 +94,11 @@
 
         <!-- Coluna do texto -->
         <div class="about-page__text-col">
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             My art is a reflection of skin and color.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             I paint the nude female form as a universal language for our most
             authentic self. True authenticity demands vulnerability—the courage
             to be seen in every shade of your being. It is not easy, but it is
@@ -104,7 +110,7 @@
             into a mirror for the viewer.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             This body of work is a path through the reality of trauma and the
             slow, steady alchemy of healing. I explore the cataclysm of
             overwhelming pain that shatters one's world—a point where the only
@@ -115,7 +121,7 @@
             they are a sacred gift and the only path to true transformation.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             Color is the pulse of this journey. I wield bold, symbolic hues to
             give voice to the unspeakable—the electric charge of rage, the deep
             void of grief, the radiant warmth of rebirth. Each color is a
@@ -123,7 +129,7 @@
             story being told.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             Ultimately, this is my own story. Each painting is a page from my
             unconscious, a visual dialogue with myself: memories, doubts, fears,
             hopes; my own trauma and the vast spectrum of feelings it evokes. I
@@ -131,7 +137,7 @@
             unfolds during the act of creation. My art says what words cannot.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             By sharing my journey, I hope to normalize every human emotion,
             especially difficult ones. We are here, ultimately, to feel—to
             experience life in its raw entirety and to grow through every
@@ -145,7 +151,7 @@
             transformative passage.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             It is a fundamental human experience. In revealing our inner battles
             and bare feelings, we find relief, connection, and the profound
             understanding that we are not alone in our struggles. This is my
@@ -153,7 +159,7 @@
             our shared vulnerabilities become our greatest strength.
           </p>
 
-          <p class="”about-page__body”">
+          <p class=”about-page__body”>
             Welcome. This is more than a gallery; it is an invitation to witness
             the beautiful, painful, and powerful process of becoming.
           </p>
@@ -186,9 +192,9 @@
       <div class="footer__col">
         <h3 class="footer__col-title">Showroom Addresses</h3>
         <ul class="footer__col-list" role="list">
-          <li><a class="footer__link" href="#">BRUT</a></li>
+          <li><span class="footer__link">BRUT</span></li>
           <li>
-            <a class="footer__link" href="#">Magnitogorsk, 24 Kuybysheva St.</a>
+            <span class="footer__link">Magnitogorsk, 24 Kuybysheva St.</span>
           </li>
         </ul>
       </div>

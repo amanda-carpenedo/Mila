@@ -30,4 +30,8 @@
   .about {
     height: 60vh;
   }
+
+  .about__overlay {
+    padding-bottom: 64px;
+  }
 }

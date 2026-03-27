@@ -19,17 +19,27 @@
 /* Logo — começa enorme (quase 100vw), encolhe ao rolar */
 .header__logo {
   pointer-events: all;
-  display: inline-block;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
   margin-top: 60px;
-  transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              left 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header--scrolled .header__logo {
+  right: auto;
+  left: var(--space-8);
+  top: 100%;
+  transform: translateY(-50%);
   margin-top: 0;
 }
 
 .header__logo img {
   display: block;
+  margin: 0 auto;
   width: min(1330px, calc(100vw - 60px));
   height: auto;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,12 +47,55 @@
 }
 
 .header--scrolled .header__logo img {
-  width: 200px;
+  margin: 0;
+  width: 260px;
 }
 
-/* Botão hamburguer — alinhado horizontalmente com o logo */
-.header__menu-toggle {
+/* Grupo carrinho + hamburguer */
+.header__actions {
   pointer-events: all;
+  position: absolute;
+  right: var(--space-8);
+  top: 80%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+  opacity: 0;
+  transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease;
+}
+
+.header--scrolled .header__actions {
+  margin-top: 0;
+  opacity: 1;
+}
+
+/* Botão carrinho */
+.header__cart {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__cart img {
+  display: block;
+  width: 22px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+
+.header__cart:hover img {
+  opacity: 0.7;
+}
+
+/* Botão hamburguer */
+.header__menu-toggle {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -54,27 +107,14 @@
   background: none;
   border: none;
   padding: 0;
-  margin-top: 60px;
-  opacity: 0;
-  transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.4s ease;
-}
-
-.header--scrolled .header__menu-toggle {
-  margin-top: 0;
-  opacity: 1;
 }
 
 .header__menu-toggle span {
   display: block;
   width: 100%;
   height: 1.5px;
-  background-color: var(--color-ui);
-  transition: background-color 0.3s ease;
-}
-
-.header--scrolled .header__menu-toggle span {
   background-color: var(--color-white);
+  transition: background-color 0.3s ease;
 }
 
 /* Barra de fundo que aparece ao scrollar */
@@ -161,6 +201,25 @@
   margin-top: var(--space-6);
 }
 
+/* Estado inicial: invisível e deslocado para baixo */
+.nav-drawer__nav li {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+/* Quando o drawer abre: cada item entra em sequência */
+.nav-drawer.is-open .nav-drawer__nav li {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-drawer.is-open .nav-drawer__nav li:nth-child(1) { transition-delay: 0.18s; }
+.nav-drawer.is-open .nav-drawer__nav li:nth-child(2) { transition-delay: 0.25s; }
+.nav-drawer.is-open .nav-drawer__nav li:nth-child(3) { transition-delay: 0.32s; }
+.nav-drawer.is-open .nav-drawer__nav li:nth-child(4) { transition-delay: 0.39s; }
+.nav-drawer.is-open .nav-drawer__nav li:nth-child(5) { transition-delay: 0.46s; }
+
 .nav-drawer__link {
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
@@ -204,23 +263,50 @@
     padding: var(--space-5) var(--space-6);
   }
 
-  .header__logo img {
-    width: calc(100vw - 60px);
+  .header--scrolled .header__logo {
+    left: var(--space-6);
   }
+
+  .header__logo img {
+    width: 90vw;
+  }
+
+  .header__cart img {
+  width: 18px;
+  height: auto;
+}
+
+.header__menu-toggle span {
+  width: 90%;
+  height: 1.2px;
+  
+}
+
 
   .header--scrolled .header__logo img {
-    width: 100px;
+    width: 140px;
+    margin: 0;
   }
 
-  .header__menu-toggle {
+  .header__actions {
+    right: var(--space-6);
     margin-top: 40px;
   }
 
-  .header--scrolled .header__menu-toggle {
+  .header--scrolled .header__actions {
     margin-top: 0;
   }
 
   .nav-drawer {
-    width: 75vw;
+    width: 100vw;
   }
+
+  .header--scrolled .header__logo {
+  top: 120%;
+}
+
+.header__actions {
+  top: 100%;
+}
+
 }
