@@ -152,4 +152,10 @@
   .about-page__grid {
     padding-top: 30px;
   }
+
+  .about-page__lead,
+  .about-page__body {
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+  }
 }
