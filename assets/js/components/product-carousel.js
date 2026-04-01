@@ -10,30 +10,46 @@
   var current = 0;
   var total   = slides.length;
 
-  function goTo(index) {
-    slides[current].classList.remove("is-active");
-    thumbs[current].classList.remove("is-active");
+  // Abre direto na pintura indicada pela URL (?id=N)
+  var params  = new URLSearchParams(window.location.search);
+  var startId = parseInt(params.get("id"), 10);
+  if (!isNaN(startId) && startId >= 0 && startId < total) {
+    current = startId;
+  }
 
-    current = (index + total) % total;
+  function updateTitle() {
+    var name = "Paint " + (current + 1);
+    var titleEl = document.querySelector(".product-page__title");
+    if (titleEl) titleEl.textContent = name;
+    document.title = name + " — Mila | Skin & Colour";
+  }
 
-    slides[current].classList.add("is-active");
-    thumbs[current].classList.add("is-active");
-
-    if (counter) counter.textContent = (current + 1) + "/" + total;
-
-    // Atualiza src de todos os thumbnails para recortes da nova imagem ativa
+  function updateThumbs() {
     var newSrc = slides[current].src;
     thumbs.forEach(function (thumb) {
       thumb.querySelector("img").src = newSrc;
     });
   }
 
+  function goTo(index) {
+    slides[current].classList.remove("is-active");
+    current = (index + total) % total;
+    slides[current].classList.add("is-active");
+
+    if (counter) counter.textContent = (current + 1) + "/" + total;
+    updateThumbs();
+    updateTitle();
+  }
+
+  // Aplica estado inicial
+  if (current !== 0) {
+    slides[0].classList.remove("is-active");
+    slides[current].classList.add("is-active");
+    if (counter) counter.textContent = (current + 1) + "/" + total;
+    updateThumbs();
+  }
+  updateTitle();
+
   if (prev) prev.addEventListener("click", function () { goTo(current - 1); });
   if (next) next.addEventListener("click", function () { goTo(current + 1); });
-
-  thumbs.forEach(function (thumb) {
-    thumb.addEventListener("click", function () {
-      goTo(parseInt(thumb.dataset.index, 10));
-    });
-  });
-})();
+}());
