@@ -9,7 +9,9 @@
 /* --- Breadcrumb --- */
 
 .product-page__breadcrumb {
-  margin-bottom: 0;
+  position: absolute;
+  top: 140px;
+  left: 90px;
 }
 
 /* --- Layout principal (carrossel + info) --- */
@@ -280,7 +282,7 @@
 
 @media (max-width: 768px) {
   .product-page {
-    padding: 80px 24px;
+    padding: 170px 30px 100px;
   }
 
   .product-page__layout {
@@ -288,8 +290,34 @@
     gap: 40px;
   }
 
+  .product-page__carousel-col {
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-carousel {
+    width: 100%;
+  }
+
+  .product-carousel__track {
+    width: 100%;
+  }
+
+  .product-carousel__thumbs {
+    width: 100%;
+    justify-content: center;
+    gap: var(--space-4);
+  }
+
   .product-carousel__thumb {
     width: 60px;
     height: 60px;
   }
+
+  .product-page__breadcrumb {
+  position: absolute;
+  top: 140px;
+  left: 30px;
+}
+
 }

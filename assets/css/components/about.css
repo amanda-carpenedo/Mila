@@ -35,4 +35,9 @@
   .about__overlay {
     padding-bottom: 64px;
   }
+
+  .about__image {
+    height: 100%;
+    object-position: 50% 100%;
+  }
 }

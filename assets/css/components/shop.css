@@ -35,4 +35,8 @@
   .shop__overlay {
     padding-bottom: 64px;
   }
+
+  .shop__image {
+  height: 90vh;
+}
 }
