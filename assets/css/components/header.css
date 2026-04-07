@@ -74,7 +74,7 @@
 
 /* Botão carrinho */
 .header__cart {
-  display: flex;
+  display: none;
   align-items: center;
   background: none;
   border: none;
@@ -83,7 +83,7 @@
 }
 
 .header__cart img {
-  display: block;
+  display: none;
   width: 22px;
   height: auto;
   filter: brightness(0) invert(1);

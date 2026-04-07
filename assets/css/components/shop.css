@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
   .shop {
-    height: 60vh;
+    height: 100%;
   }
 
   .shop__overlay {
