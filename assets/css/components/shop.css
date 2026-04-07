@@ -33,7 +33,9 @@
   }
 
   .shop__overlay {
-    padding-bottom: 64px;
+    align-items: center;
+    padding-bottom: 0;
+    background: rgba(0, 0, 0, 0.30);
   }
 
   .shop__image {

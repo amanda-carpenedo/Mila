@@ -2,7 +2,7 @@
   display: inline-block;
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
-  font-size: var(--text-sm);
+  font-size: var(--text-2xl);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   padding: var(--space-3) var(--space-8);
@@ -24,4 +24,24 @@
 .btn:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .btn--outline.about__cta,
+  .shop__overlay .btn--outline,
+  .gallery__overlay .btn--outline {
+    border: none;
+    text-transform: none;
+    letter-spacing: var(--tracking-normal);
+    padding: var(--space-2) var(--space-4);
+    font-weight: 600;
+  }
+
+  .btn--outline.about__cta:hover,
+  .shop__overlay .btn--outline:hover,
+  .gallery__overlay .btn--outline:hover {
+    background-color: transparent;
+    color: var(--color-white);
+
+  }
 }
